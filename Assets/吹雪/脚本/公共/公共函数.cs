@@ -65,8 +65,8 @@ namespace 吹雪
                         case 选择类型.所有子对象:
                             _运行时目标 = _运行时目标.Union(_目标.Children().ToList()).ToList();
                             break;
-                        case 选择类型.对象下对应Tag:
-                            foreach (var tag in _目标信息.tags)
+                        case 选择类型.对象下对应标签:
+                            foreach (var tag in _目标信息._标签)
                             {
                                 _运行时目标 = _运行时目标.Union(_目标.Descendants().Where(x => x.CompareTag(tag))).ToList();
                             }
@@ -121,10 +121,10 @@ namespace 吹雪
                             _运行时目标 = _运行时目标.Union(_对象.Children().ToList()).ToList();
                         }
                         break;
-                    case 选择类型.对象下对应Tag:
+                    case 选择类型.对象下对应标签:
                         foreach (var _对象 in _目标对象)
                         {
-                            foreach (var tag in _目标信息.tags)
+                            foreach (var tag in _目标信息._标签)
                             {
                                 _运行时目标 = _运行时目标.Union(_对象.Descendants().Where(x => x.CompareTag(tag))).ToList();
                             }

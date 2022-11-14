@@ -21,8 +21,8 @@ namespace 吹雪
 
         public 选择类型 _选择类型;
 
-        [ShowIf("_选择类型", 选择类型.对象下对应Tag)]
-        public List<string> tags;
+        [ShowIf("_选择类型", 选择类型.对象下对应标签)]
+        public List<string> _标签;
 
         public List<GameObject> 获取对象()
         {

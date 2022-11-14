@@ -38,6 +38,10 @@ namespace 吹雪
             {
                 _菜单.Add("项目路径设置", _项目路径);
                 if (_项目路径._游戏配置 != null) _菜单.Add("基础配置", _项目路径._游戏配置);
+
+                _菜单.AddAllAssetsAtPath("目标对象", _项目路径._目标对象路径, typeof(目标信息SO), true);
+                _菜单.AddAllAssetsAtPath("实例化对象", _项目路径._实例化对象路径, typeof(实例化信息SO), true);
+                _菜单.AddAllAssetsAtPath("场景对象", _项目路径._场景对象路径, typeof(场景SO), true);
             }
 
             return _菜单;
